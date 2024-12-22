@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="ar_models" sortOrder="900">
+        <settings>
+            <collapsible>true</collapsible>
+            <label translate="true">AR Models</label>
+        </settings>
+        <field name="ar_model_android" formElement="fileUploader">
+            <settings>
+                <notice translate="true">Allowed file types: glb, gltf, usdz</notice>
+                <label translate="true">AR Model for Android</label>
+                <componentType>fileUploader</componentType>
+            </settings>
+            <formElements>
+                <fileUploader>
+                    <settings>
+                        <allowedExtensions>glb,gltf</allowedExtensions>
+                        <maxFileSize>50000000</maxFileSize>
+                        <uploaderConfig>
+                            <param xsi:type="string" name="url">boyoot_armodel/upload/save</param>
+                        </uploaderConfig>
+                    </settings>
+                </fileUploader>
+            </formElements>
+        </field>
+        <field name="ar_model_ios" formElement="fileUploader">
+            <settings>
+                <notice translate="true">Allowed file type: usdz</notice>
+                <label translate="true">AR Model for iOS</label>
+                <componentType>fileUploader</componentType>
+            </settings>
+            <formElements>
+                <fileUploader>
+                    <settings>
+                        <allowedExtensions>usdz</allowedExtensions>
+                        <maxFileSize>50000000</maxFileSize>
+                        <uploaderConfig>
+                            <param xsi:type="string" name="url">boyoot_armodel/upload/save</param>
+                        </uploaderConfig>
+                    </settings>
+                </fileUploader>
+            </formElements>
+        </field>
+    </fieldset>
+</form>
